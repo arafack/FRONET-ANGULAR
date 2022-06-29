@@ -1,0 +1,102 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center"> Edicion de Clientes</h3>
+
+    <form (ngSubmit)="onSubmit()" #clienteForm = "ngForm">
+      <div class="form-group">
+        <label>Id cliente : </label>
+        <input type="text"
+        class="form-control"
+        id="id_cliente"
+        [(ngModel)] = "cliente.id_cliente"
+        name="id_cliente"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite la identificacion del cliente"
+        #id_cliente="ngModel"
+      >
+      </div>
+
+      <div class="form-group">
+        <label>	Id categoria : </label>
+        <input type="text"
+        class="form-control"
+        id="id_categoria"
+        [(ngModel)] = "cliente.id_categoria"
+        name="iid_categoria"
+        required
+        placeholder="Digite la identificacion de la categoria"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Nombre : </label>
+        <input type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)] = "cliente.nombre"
+        name="nombre"
+        required
+        placeholder="Digite los nombres del cliente"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Telefono 1 : </label>
+        <input type="text"
+        class="form-control"
+        id="telefono1"
+        [(ngModel)] = "cliente.telefono1"
+        name="telefono1"
+        required
+        placeholder="Digite telefono"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Telefono 2 : </label>
+        <input type="text"
+        class="form-control"
+        id="telefono2"
+        [(ngModel)] = "cliente.telefono2"
+        name="telefono2"
+        required
+        placeholder="Digite telefono2"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Direccion : </label>
+        <input type="text"
+        class="form-control"
+        id="direccion"
+        [(ngModel)] = "cliente.direccion"
+        name="direccion">
+      </div>
+
+      <div class="form-group">
+        <label>Ciudad : </label>
+        <input type="text"
+        class="form-control"
+        id="ciudad"
+        [(ngModel)] = "cliente.ciudad"
+        name="ciudad"
+        required
+        placeholder="Digite la ciudad"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Pais : </label>
+        <input type="text"
+        class="form-control"
+        id="pais"
+        [(ngModel)] = "cliente.pais"
+        name="pais"
+        required
+        placeholder="Digite el pais"
+        >
+      </div>
+      <button class="btn btn-success" [disabled]="!clienteForm.valid">Guardar</button>
+    </form>
+</div>
